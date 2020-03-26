@@ -1,0 +1,17 @@
+Jonathan Lazar
+getMarvel unit tests
+
+type    	| alpha     |      Expected result               | Pass/Fail
+-------------------------------------------------------------------------
+series		| A	    |  Returns series A			 | Pass
+-------------------------------------------------------------------------
+characters 	| A	    |  Returns characters A	         | Pass
+-------------------------------------------------------------------------
+series		| 7	    |  Error stating Invalid Character   | Pass
+-------------------------------------------------------------------------
+characters 	| !	    |  Error stating Invalid Character   | Pass
+-------------------------------------------------------------------------
+XYZ		| S	    |  Error stating Invalid Type 	 | Pass
+-------------------------------------------------------------------------
+XYZ		| 7	    |  Error stating Invalid Character   | Pass
+-------------------------------------------------------------------------

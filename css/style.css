@@ -1,0 +1,179 @@
+body {
+  background-color:#E6E6FF;
+  font-family:arial;
+}
+
+
+form {
+  width: 450px;
+  margin: 5% auto;
+}
+
+
+.input {
+  display: flex;
+  align-items: center;
+}
+
+
+.button {
+  height: 44px;
+  border: none;
+}
+
+  
+#name {
+  width: 75%;
+  background: #FDFCFB;
+  font-family: inherit;
+  color: #737373;
+  letter-spacing: 1px;
+  text-indent: 5%;
+  border-radius: 5px 0 0 5px;
+  font-size:14px;
+}
+
+
+#submit {
+  width: 25%;
+  height: 46px;
+  background: #DB4D4D;
+  font-family: inherit;
+  font-weight: bold;
+  color: inherit;
+  letter-spacing: 1px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background .3s ease-in-out;
+  font-size:14px;
+}
+  
+
+#submit:hover {
+  background: #d45d7d;
+}
+  
+
+input:focus {
+  outline: none;
+  outline: 2px solid #DB4D4D;
+  box-shadow: 0 0 2px #DB4D4D;
+}
+
+#loadingIcon {
+  display:none;
+  margin-left: 45%;
+}
+
+#player {
+  width: 600px;
+  margin: 5% auto;
+  font-family: inherit;
+  display:none;
+}
+
+#bio {
+  float: left; 
+  width: 275px; 
+  margin-top:10px;
+}
+
+#img {
+  position:relative;
+  margin:5px;
+  float:left;
+  height:100px;
+  width:100px;
+}
+
+#song {
+  float: left; 
+  width: 275px; 
+  margin-top: 17px;
+  margin-left: 20px;
+}
+
+#track {
+  width:250px;
+  height:75px;
+  position:relative;
+  font-size:12px;
+  float:left;
+
+}
+
+#title {
+  width:200px;
+  font-size:24px;
+  font-weight:bold;
+}
+
+#track a {
+  text-decoration:none;
+  color:#000000;
+}
+
+#track a:hover {
+  text-decoration:underline;
+  color:#000000;
+}
+.songimg {
+  position:relative;
+  float:left;
+  margin:3px;
+}
+
+#attrib {
+  margin-top:15px;
+  font-size:8px;
+}
+
+#attrib a {
+  text-decoration:none;
+  color:#000000;
+}
+
+#attrib a:hover {
+  text-decoration:underline;
+  color:#000000;
+}
+
+.alpha {
+  border:1px solid black;
+  float:left;
+  background-color: #F4F947;
+  padding:3px;
+  font-size:24px;
+}
+
+.alpha:hover { 
+  background-color: #F796F7;
+}
+
+#characters {
+  margin-left:25%;
+  text-align:center;
+  display: inline-block;
+  cursor: pointer;
+}
+
+#charactertitles {
+  font-weight:bold;
+  font-size:24px;
+  margin-left:50%;
+  margin-top:100px;
+}
+
+#series {
+  margin-left:25%;
+  text-align:center;
+  display: inline-block;
+  cursor: pointer;
+}
+
+#titleseries {
+  font-weight:bold;
+  font-size:24px;
+  margin-left:50%;
+  margin-top:25px;
+}
