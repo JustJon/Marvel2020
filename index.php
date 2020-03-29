@@ -8,7 +8,7 @@ Copyright Jonathan Lazar 2020
 <?php require_once 'includes/header.php'; ?>
 <html>
 <head>
-	<title>Marvel Music Player</title>
+	<title>Marvel API Display</title>
 	<link rel="stylesheet" href="css/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="http://malsup.github.com/jquery.form.js"></script> 
@@ -27,17 +27,27 @@ Copyright Jonathan Lazar 2020
                                 	$('#loadingIcon').show();
 					$('#player').hide();
                         	},
+				dataType: 'json',
         			success: function (data, status, xhr) {// success callback function
 					console.log(data);
-					var markers = JSON.stringify(data);
-            				$('#player').text(markers);
-					alert(markers);
+					var markers = data;
+					var htmltable = '<table class="htmltable" style="width:700px">';
+					for(i=0; i<data.data.length; i++) {
+						if (parentId == 'characters') {
+							htmltable+='<tr><td style="width:100px; border: 1px solid black;">'+data.data[i].id+'</td><td style="width:200px; border: 1px solid black;">'+data.data[i].name+'</td><td style="width:300px; border: 1px solid black;">'+data.data[i].thumbnail+'</td></tr>';
+						} else if (parentId == 'series') {
+							htmltable+='<tr><td style="width:100px; border: 1px solid black;">'+data.data[i].id+'</td><td style="width:200px; border: 1px solid black;">'+data.data[i].title+'</td><td style="width:300px; border: 1px solid black;">'+data.data[i].thumbnail+'</td></tr>';
+						} else {
+							htmltable += '<tr><td colspan=3>Data Error</td></tr>';
+						}
+					}
+					htmltable+'</html>';
+            				$('#player').html(htmltable);
 					setTimeout(function() {
                                         	$('#loadingIcon').hide();
                                         	$('#player').show();
                                 	}, 1000);
     				},
-				dataType: 'json',
 			});
 		});
 	});
